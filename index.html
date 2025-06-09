@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Game Header -->
+  <div id="game-header">
+    <h1 class="game-title">🎮 Welcome to Elihle's Ultimate Tic Tac Toe! 🧠✨</h1>
+    <p class="game-slogan">Coded with logic. Played with pride. Built by Elihle.</p>
+  </div>
+
+  <!-- Main Menu -->
+  <div id="main-menu">
+    <h1>Main Menu</h1>
+    <button id="btn-start" type="button">Start Game</button>
+    <button id="btn-instructions" type="button">Instructions</button>
+    <button id="btn-about" type="button">About</button>
+    <button id="btn-reset-scores" type="button">Reset Scores</button>
+    <button id="btn-quit" type="button">Quit</button>
+  </div>
+
+  <!-- Start Screen -->
+  <div id="start-screen" style="display:none;">
+    <input id="player1-name" placeholder="Player 1 Name" />
+    <input id="player2-name" placeholder="Player 2 Name or AI" />
+    
+    <select id="player1-choice">
+      <option value="X">X</option>
+      <option value="O">O</option>
+    </select>
+
+    <select id="game-mode">
+      <option value="pvp">Player vs Player</option>
+      <option value="pvc">Player vs Computer</option>
+    </select>
+
+    <select id="difficulty" style="display:none;">
+      <option value="easy">Easy</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <button id="start-game-btn" type="button">Start Game</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" style="display:none;">
+    <div id="scoreboard">
+      <h3>Scoreboard</h3>
+      <p><span id="player1-score-name">Player 1</span>: <span id="player1-score">0</span></p>
+      <p><span id="player2-score-name">Player 2</span>: <span id="player2-score">0</span></p>
+      <p>Draws: <span id="draws-count">0</span></p>
+      <button id="reset-scores-btn" type="button">Reset Scores</button>
+    </div>
+
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- Player Turn Message -->
+    <div id="current-player-container">
+      <div id="current-player">Player X's turn</div>
+    </div>
+
+    <!-- Game Board -->
+    <div id="board" class="game-board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div>Timer: <span id="timer">10</span> seconds</div>
+
+    <button id="restart-btn" type="button">Restart Game</button>
+    <button id="back-to-menu-btn" type="button">Back to Main Menu</button>
+  </div>
+
+  <!-- ✅ JavaScript should be loaded at the end -->
+  <script src="script.js"></script>
+</body>
+</html>

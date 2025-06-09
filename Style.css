@@ -1,0 +1,131 @@
+/* Body and general font */
+body {
+  background-color: #fff0f3;
+  color: #5b0a0a; /* dark maroon */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+#game-header {
+  text-align: center;
+  margin: 20px 0;
+  color: #7f1d1d; /* medium maroon */
+}
+
+/* Start screen inputs and buttons */
+#start-screen input,
+#start-screen select,
+#start-screen button {
+  margin: 10px 5px;
+  padding: 8px 12px;
+  border: 2px solid #7f1d1d;
+  border-radius: 6px;
+  background-color: #f9d6d5;
+  color: #5b0a0a;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#start-screen button:hover {
+  background-color: #7f1d1d;
+  color: #fff0f3;
+  cursor: pointer;
+}
+
+/* Game container styling */
+#game-container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fce9e9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #7f1d1d;
+}
+
+/* Scoreboard */
+#scoreboard {
+  margin-bottom: 20px;
+  background-color: #7f1d1d;
+  color: #fff0f3;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#scoreboard h3 {
+  margin-top: 0;
+}
+
+#scoreboard p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Buttons inside game */
+#reset-scores-btn,
+#restart-btn {
+  background-color: #7f1d1d;
+  color: #fff0f3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-scores-btn:hover,
+#restart-btn:hover {
+  background-color: #5b0a0a;
+}
+
+/* Game board grid */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Cells */
+.cell {
+  background-color: #f9d6d5;
+  border: 2px solid #7f1d1d;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5b0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #fce9e9;
+}
+
+/* Current player message */
+#current-player-container {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7f1d1d;
+}
+
+/* Timer styling */
+#game-container > div:nth-last-child(2) {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #5b0a0a;
+}
+.no-click {
+  pointer-events: none;
+  opacity: 0.6; /* Optional: make board look disabled */
+}
